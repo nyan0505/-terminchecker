@@ -12,30 +12,31 @@ A Python script that automatically checks whether a termin (appointment) is avai
 
 ## Steps
 
-### 1. Open the Terminal
+### 1. Open the Terminal  
 Open the terminal on your system to access the command line interface.
 
-### 2. Locate Your Python Script
-Make sure you know the full path to your `terminchecker.py` script. For example:<br/>
-/home/user/scripts/terminchecker.py
-###3. Edit the Cron Table
-Run the following command to open your cron table for editing:<br/>
+### 2. Locate Your Python Script  
+Make sure you know the full path to your `terminchecker.py` script. For example:  
+`/home/user/scripts/terminchecker.py`
+
+### 3. Edit the Cron Table  
+Run the following command to open your cron table for editing:  
 ```
 crontab -e
 ```
 
-###4. Add a New Cron Job
+### 4. Add a New Cron Job  
 In the editor that opens, add a new line at the bottom to specify when and how to run the script. The general syntax for a cron job is as follows:<br/>
 ```
 * * * * * /path/to/python /path/to/terminchecker.py
 ```
 
-###5. Save and Exit the Editor
+### 5. Save and Exit the Editor 
 If using nano, press Ctrl + O to save, then Ctrl + X to exit.<br/>
 
 If using vim, press Esc, then type :wq and press Enter.<br/>
 
-###6. Confirm the Cron Job
+### 6. Confirm the Cron Job  
 To verify that your cron job was added successfully, run:<br/>
 ```
 crontab -l
